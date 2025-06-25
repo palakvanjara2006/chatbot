@@ -1,0 +1,89 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hi
+    - hello
+    - good morning
+    - hey
+
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - correct
+    - sure
+
+- intent: deny
+  examples: |
+    - no
+    - nope
+    - never
+
+- intent: small_talk
+  examples: |
+    - how are you?
+    - what's up?
+    - how's it going?
+
+- intent: ask_menu
+  examples: |
+    - show me the menu
+    - what can I order?
+    - menu please
+
+- intent: add_to_cart
+  examples: |
+    - I want to order pizza
+    - Add pasta to my order
+    - I need 2 burgers
+
+- intent: review_cart
+  examples: |
+    - show my cart
+    - what's in my cart?
+    - review my order
+
+- intent: confirm_order
+  examples: |
+    - confirm my order
+    - place the order
+    - proceed
+
+- intent: cancel_order
+  examples: |
+    - cancel my order
+    - I want to cancel
+
+- intent: check_order_status
+  examples: |
+    - what's the status of my order?
+    - is my food ready?
+
+- intent: provide_food_item
+  examples: |
+    - pizza
+    - burger
+    - pasta
+
+- intent: provide_quantity
+  examples: |
+    - 1
+    - 2
+    - 3
+
+- intent: provide_number_of_guests
+  examples: |
+    - 2 guests
+    - for 4 people
+
+- intent: provide_reservation_time
+  examples: |
+    - 7 PM
+    - at 8 o'clock

@@ -1,0 +1,17 @@
+version: "3.1"
+
+test_stories:
+- story: simple order test
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_menu
+  - action: utter_menu
+  - intent: provide_food_item
+  - action: utter_ask_quantity
+  - intent: provide_quantity
+  - action: utter_add_to_cart
+  - intent: review_cart
+  - action: utter_review_cart
+  - intent: confirm_order
+  - action: utter_confirm_order

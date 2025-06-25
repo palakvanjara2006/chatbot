@@ -1,0 +1,17 @@
+version: "3.1"
+
+rules:
+- rule: Greet user anytime
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: Cancel order rule
+  steps:
+  - intent: cancel_order
+  - action: action_cancel_order
+
+- rule: Show menu anytime
+  steps:
+  - intent: ask_menu
+  - action: utter_menu

@@ -1,0 +1,98 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - small_talk
+  - ask_menu
+  - add_to_cart
+  - review_cart
+  - confirm_order
+  - cancel_order
+  - check_order_status
+  - provide_food_item
+  - provide_quantity
+  - provide_number_of_guests
+  - provide_reservation_time
+
+entities:
+  - food_item
+  - quantity
+  - number_of_guests
+  - reservation_time
+
+slots:
+  food_item:
+    type: any
+    mappings:
+      - type: from_entity
+        entity: food_item
+
+  quantity:
+    type: any
+    mappings:
+      - type: from_entity
+        entity: quantity
+
+  number_of_guests:
+    type: any
+    mappings:
+      - type: from_entity
+        entity: number_of_guests
+
+  reservation_time:
+    type: any
+    mappings:
+      - type: from_entity
+        entity: reservation_time
+
+responses:
+  utter_greet:
+    - text: "Hello! How can I assist you today?"
+
+  utter_goodbye:
+    - text: "Goodbye! Have a great day."
+
+  utter_fallback:
+    - text: "Sorry, I didn't understand that. Can you please rephrase?"
+
+  utter_small_talk:
+    - text: "I'm here to help you with your food order."
+
+  utter_menu:
+    - text: "Our menu includes Pizza, Pasta, Burger, Salad, and Dessert."
+
+  utter_add_to_cart:
+    - text: "I've added {food_item} (x{quantity}) to your cart."
+
+  utter_review_cart:
+    - text: "Here is your current cart. Would you like to confirm the order?"
+
+  utter_confirm_order:
+    - text: "Your order has been confirmed. Thank you!"
+
+  utter_cancel_order:
+    - text: "Your order has been cancelled."
+
+  utter_order_status:
+    - text: "Your order is being prepared and will be delivered soon."
+
+  utter_ask_food_item:
+    - text: "What food item would you like to order?"
+
+  utter_ask_quantity:
+    - text: "How many would you like?"
+
+  utter_ask_number_of_guests:
+    - text: "For how many guests is the reservation?"
+
+  utter_ask_reservation_time:
+    - text: "At what time would you like to reserve?"
+
+actions:
+  - action_order_food
+  - action_book_table
+  - action_cancel_order
+  - action_extract_slots
